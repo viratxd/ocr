@@ -17,10 +17,9 @@ app.use('/api', ocrRoutes);
 app.use(errorHandler);
 
 // For Vercel, export the app instead of starting the server directly
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(config.port, () => {
+ app.listen(config.port, () => {
     console.log(`Server running on port ${config.port}`);
   });
-}
+
 
 export default app;
